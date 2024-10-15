@@ -70,28 +70,28 @@ const onSelectBlogDetail = (id: string) => {
 
       <Image
         :images="[
-          { src: '/images/office-style-1.jpg', alt: 'スタイリッシュなスーツ' },
+          { src: '/images/aparell1.jpg', alt: 'スタイリッシュなスーツ' },
           {
-            src: '/images/office-style-2.jpg',
+            src: '/images/aparell1.jpg',
             alt: 'モダンなブラウスとスカート',
           },
-          { src: '/images/office-style-3.jpg', alt: '洗練されたブレザー' },
+          { src: '/images/aparell1.jpg', alt: '洗練されたブレザー' },
         ]"
       />
 
-      <RelatedProduct
+      <RelatedProducts
         :products="[
           {
             id: 1,
             name: 'エレガントテーラードジャケット',
             price: 29800,
-            image: '/products/jacket.jpg',
+            image: '/images/aparell1.jpg',
           },
           {
             id: 2,
             name: 'シルクブレンドブラウス',
             price: 12800,
-            image: '/products/blouse.jpg',
+            image: '/images/aparell1.jpg',
           },
         ]"
         layout="horizontal"
@@ -109,11 +109,11 @@ const onSelectBlogDetail = (id: string) => {
       <Image
         :images="[
           {
-            src: '/images/casual-chic-1.jpg',
+            src: '/images/aparell1.jpg',
             alt: 'スタイリッシュなニットウェア',
           },
           {
-            src: '/images/casual-chic-2.jpg',
+            src: '/images/aparell1.jpg',
             alt: 'エレガントなデニムスタイル',
           },
         ]"
@@ -131,7 +131,7 @@ const onSelectBlogDetail = (id: string) => {
       <Image
         :images="[
           {
-            src: '/images/eco-friendly.jpg',
+            src: '/images/aparell1.jpg',
             alt: 'エコフレンドリーな素材を使用したアイテム',
             link: 'https://stylenova.com/eco-friendly',
           },

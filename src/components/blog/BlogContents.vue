@@ -41,7 +41,7 @@ const formatDate = (date: Date): string => {
 
 <style scoped>
 .blog-container {
-  max-width: 600px;
+  max-width: 660px;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
