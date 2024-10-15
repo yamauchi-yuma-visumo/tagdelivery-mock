@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import BlogPostGrid, { BlogPost } from "@/components/blog/BlogGridList.vue";
+import BlogPostGrid, { type BlogPost } from "@/components/blog/BlogGridList.vue";
 
 // サンプルデータ生成関数
 const generateSampleData = (count: number): BlogPost[] => {
