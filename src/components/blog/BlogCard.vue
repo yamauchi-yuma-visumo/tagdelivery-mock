@@ -52,7 +52,6 @@ const formatDate = (date: Date): string => {
 <style scoped>
 .blog-post-card {
   width: 100%;
-  max-width: 300px;
   height: 400px; /* カードの全体の高さを固定 */
   display: flex;
   flex-direction: column;

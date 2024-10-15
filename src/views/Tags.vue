@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import BlogPostGrid, { type BlogPost } from "@/components/blog/BlogGridList.vue";
+import BlogGridList, {
+  type BlogPost,
+} from "@/components/blog/BlogGridList.vue";
+import BaseModal from "@/components/uiParts/BaseModal.vue";
 
 // サンプルデータ生成関数
 const generateSampleData = (count: number): BlogPost[] => {
@@ -43,7 +46,10 @@ const blogPosts = ref<BlogPost[]>(generateSampleData(12));
 <template>
   <div class="blog-page">
     <h1>ブログ投稿一覧</h1>
-    <BlogPostGrid :posts="blogPosts" />
+    <BlogGridList
+      :posts="blogPosts"
+      @select-blog="onSelectBlogDetail($event)"
+    />
   </div>
 </template>
 
