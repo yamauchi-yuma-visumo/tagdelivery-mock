@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { defineProps, onMounted, onUnmounted, computed, watch } from "vue";
+import { defineProps, onMounted, onUnmounted, computed, watch } from 'vue';
 
 interface Props {
   modalWidth?: string;
   modalHeight?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
-  modalWidth: "90%",
-  modalHeight: "90vh",
+  modalWidth: '90%',
+  modalHeight: '90vh',
 });
 
 // モーダルの開閉状態
 const model = defineModel<boolean>();
 
 onMounted(() => {
-  document.addEventListener("keydown", handleEscape);
+  document.addEventListener('keydown', handleEscape);
 });
 
 onUnmounted(() => {
-  document.removeEventListener("keydown", handleEscape);
+  document.removeEventListener('keydown', handleEscape);
   // コンポーネントがアンマウントされたときに必ずスクロールを有効にする
   enableBodyScroll();
 });
 
 const disableBodyScroll = () => {
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = 'hidden';
 };
 
 const enableBodyScroll = () => {
-  document.body.style.overflow = "";
+  document.body.style.overflow = '';
 };
 
 const modalStyle = computed(() => ({
@@ -49,7 +49,7 @@ watch(model, (newValue) => {
 });
 
 const handleEscape = (e: KeyboardEvent) => {
-  if (e.key === "Escape" && model.value) {
+  if (e.key === 'Escape' && model.value) {
     model.value = false;
   }
 };

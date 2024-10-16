@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { defineProps, ref } from "vue";
-import BlogCard from "./BlogCard.vue";
-import BaseModal from "@/components/uiParts/BaseModal.vue";
-import BlogContents from "@/components/blog/BlogContents.vue";
-import Heading from "@/components/blog/blocks/Heading.vue";
-import Paragraph from "@/components/blog/blocks/Paragraph.vue";
-import Image from "@/components/blog/blocks/Image.vue";
-import ImageCard from "@/components/blog/blocks/ImageCard.vue";
-import RelatedProducts from "@/components/blog/blocks/RelatedProducts.vue";
+import { defineProps, ref } from 'vue';
+import BlogCard from './BlogCard.vue';
+import BaseModal from '@/components/uiParts/BaseModal.vue';
+import BlogContents from '@/components/blog/BlogContents.vue';
+import Heading from '@/components/blog/blocks/Heading.vue';
+import Paragraph from '@/components/blog/blocks/Paragraph.vue';
+import Image from '@/components/blog/blocks/Image.vue';
+import ImageCard from '@/components/blog/blocks/ImageCard.vue';
+import RelatedProducts from '@/components/blog/blocks/RelatedProducts.vue';
 
 export interface BlogPost {
   id: string;
@@ -23,7 +23,7 @@ const props = defineProps<{
 }>();
 
 interface Emit {
-  (event: "select-blog", id: string): void;
+  (event: 'select-blog', id: string): void;
 }
 const emit = defineEmits<Emit>();
 
@@ -54,14 +54,11 @@ const onSelectBlogDetail = (id: string) => {
     >
       <Paragraph size="medium">
         都市生活者のためのファッションブランド、StyleNovaが2023年秋冬コレクションを発表しました。
-        今シーズンのテーマは「Urban Elegance
-        Evolution」。洗練された都会的なスタイルに、
+        今シーズンのテーマは「Urban Elegance Evolution」。洗練された都会的なスタイルに、
         クラシックなエレガンスを融合させた斬新なデザインが特徴です。
       </Paragraph>
 
-      <Heading level="2" size="medium" :bold="true"
-        >1. モダンなオフィススタイル</Heading
-      >
+      <Heading level="2" size="medium" :bold="true">1. モダンなオフィススタイル</Heading>
 
       <Paragraph>
         今シーズンのハイライトは、ビジネスシーンに適した洗練されたデザインです。
@@ -70,12 +67,12 @@ const onSelectBlogDetail = (id: string) => {
 
       <Image
         :images="[
-          { src: '/images/aparell1.jpg', alt: 'スタイリッシュなスーツ' },
+          { src: '/images/apparel1.jpg', alt: 'スタイリッシュなスーツ' },
           {
-            src: '/images/aparell1.jpg',
+            src: '/images/apparel3.jpg',
             alt: 'モダンなブラウスとスカート',
           },
-          { src: '/images/aparell1.jpg', alt: '洗練されたブレザー' },
+          { src: '/images/apparel5.jpg', alt: '洗練されたブレザー' },
         ]"
       />
 
@@ -85,21 +82,19 @@ const onSelectBlogDetail = (id: string) => {
             id: 1,
             name: 'エレガントテーラードジャケット',
             price: 29800,
-            image: '/images/aparell1.jpg',
+            image: '/images/apparel2.jpg',
           },
           {
             id: 2,
             name: 'シルクブレンドブラウス',
             price: 12800,
-            image: '/images/aparell1.jpg',
+            image: '/images/apparel4.jpg',
           },
         ]"
         layout="horizontal"
       />
 
-      <Heading level="2" size="medium" :bold="true"
-        >2. カジュアルシックの新定義</Heading
-      >
+      <Heading level="2" size="medium" :bold="true">2. カジュアルシックの新定義</Heading>
 
       <Paragraph>
         週末やカジュアルな場面でも、StyleNovaのエレガンスは健在です。
@@ -109,19 +104,17 @@ const onSelectBlogDetail = (id: string) => {
       <Image
         :images="[
           {
-            src: '/images/aparell1.jpg',
+            src: '/images/apparel3.jpg',
             alt: 'スタイリッシュなニットウェア',
           },
           {
-            src: '/images/aparell1.jpg',
+            src: '/images/apparel4.jpg',
             alt: 'エレガントなデニムスタイル',
           },
         ]"
       />
 
-      <Heading level="2" size="medium" :bold="true"
-        >3. エコフレンドリーな素材にフォーカス</Heading
-      >
+      <Heading level="2" size="medium" :bold="true">3. エコフレンドリーな素材にフォーカス</Heading>
 
       <Paragraph>
         今シーズン、StyleNovaは環境に配慮した素材の使用を大幅に増やしました。
@@ -131,7 +124,7 @@ const onSelectBlogDetail = (id: string) => {
       <Image
         :images="[
           {
-            src: '/images/aparell1.jpg',
+            src: '/images/apparel2.jpg',
             alt: 'エコフレンドリーな素材を使用したアイテム',
             link: 'https://stylenova.com/eco-friendly',
           },
@@ -144,32 +137,31 @@ const onSelectBlogDetail = (id: string) => {
 
       <Heading level="2" size="medium" :bold="true">注目のアイテム</Heading>
 
-      <RelatedProduct
+      <RelatedProducts
         :products="[
           {
             id: 3,
             name: 'エコフレンドリーウールコート',
             price: 49800,
-            image: '/products/coat.jpg',
+            image: '/images/apparel2.jpg',
           },
           {
             id: 4,
             name: 'リサイクルデニムジーンズ',
             price: 18800,
-            image: '/products/jeans.jpg',
+            image: '/images/apparel2.jpg',
           },
           {
             id: 5,
             name: 'オーガニックコットンニット',
             price: 15800,
-            image: '/products/knit.jpg',
+            image: '/images/apparel2.jpg',
           },
         ]"
       />
 
       <Paragraph size="medium" :bold="true">
-        StyleNova
-        2023年秋冬コレクションは、都会的なエレガンスと環境への配慮を見事に融合させました。
+        StyleNova 2023年秋冬コレクションは、都会的なエレガンスと環境への配慮を見事に融合させました。
         新しい季節に向けて、自分らしさを表現しつつ、地球にも優しいファッションを楽しんでみてはいかがでしょうか。
       </Paragraph>
     </BlogContents>

@@ -1,28 +1,21 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue';
 
 interface Props {
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   bold?: boolean;
-  align?: "left" | "center" | "right" | "justify";
+  align?: 'left' | 'center' | 'right' | 'justify';
 }
 
 withDefaults(defineProps<Props>(), {
-  size: "medium",
+  size: 'medium',
   bold: false,
-  align: "left",
+  align: 'left',
 });
 </script>
 
 <template>
-  <p
-    :class="[
-      'blog-paragraph',
-      `size-${size}`,
-      { bold: bold },
-      `align-${align}`,
-    ]"
-  >
+  <p :class="['blog-paragraph', `size-${size}`, { bold: bold }, `align-${align}`]">
     <slot></slot>
   </p>
 </template>

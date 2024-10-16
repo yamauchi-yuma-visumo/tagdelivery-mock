@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue';
 
 interface Props {
   level: 1 | 2 | 3 | 4 | 5 | 6;
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   bold?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   level: 2,
-  size: "medium",
+  size: 'medium',
   bold: false,
 });
 </script>
 
 <template>
-  <component
-    :is="`h${level}`"
-    :class="['blog-heading', `size-${size}`, { bold: bold }]"
-  >
+  <component :is="`h${level}`" :class="['blog-heading', `size-${size}`, { bold: bold }]">
     <slot></slot>
   </component>
 </template>

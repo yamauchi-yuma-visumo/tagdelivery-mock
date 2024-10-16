@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue';
 
 interface ImageProps {
   src: string;
@@ -17,12 +17,7 @@ defineProps<Props>();
 <template>
   <div class="blog-images">
     <div v-for="(image, index) in images" :key="index" class="image-wrapper">
-      <a
-        v-if="image.link"
-        :href="image.link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a v-if="image.link" :href="image.link" target="_blank" rel="noopener noreferrer">
         <img :src="image.src" :alt="image.alt" />
       </a>
       <img v-else :src="image.src" :alt="image.alt" />

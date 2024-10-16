@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue';
 
 interface Product {
   id: string | number;
@@ -10,29 +10,24 @@ interface Product {
 
 interface Props {
   products: Product[];
-  layout?: "horizontal" | "vertical";
+  layout?: 'horizontal' | 'vertical';
 }
 
 withDefaults(defineProps<Props>(), {
-  layout: "vertical",
+  layout: 'vertical',
 });
 
 const formatPrice = (price: number) => {
-  return new Intl.NumberFormat("ja-JP", {
-    style: "currency",
-    currency: "JPY",
+  return new Intl.NumberFormat('ja-JP', {
+    style: 'currency',
+    currency: 'JPY',
   }).format(price);
 };
 </script>
 
 <template>
   <div class="related-products" :class="{ 'grid-layout': products.length > 1 }">
-    <div
-      v-for="product in products"
-      :key="product.id"
-      class="product-card"
-      :class="layout"
-    >
+    <div v-for="product in products" :key="product.id" class="product-card" :class="layout">
       <img :src="product.image" :alt="product.name" class="product-image" />
       <div class="product-info">
         <h3 class="product-name">{{ product.name }}</h3>
