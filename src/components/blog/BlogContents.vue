@@ -54,7 +54,7 @@ const formatDate = (date: Date): string => {
 .blog-title {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .blog-meta {
@@ -63,6 +63,7 @@ const formatDate = (date: Date): string => {
   align-items: center;
   font-size: 0.9rem;
   color: #666;
+  margin-bottom: 30px;
 }
 
 .staff-info {
@@ -74,7 +75,7 @@ const formatDate = (date: Date): string => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 20px;
 }
 
 .staff-name {
@@ -82,7 +83,7 @@ const formatDate = (date: Date): string => {
 }
 
 .post-date {
-  font-style: italic;
+  font-size: small;
 }
 
 .blog-content {

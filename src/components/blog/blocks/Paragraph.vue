@@ -8,7 +8,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  size: 'medium',
+  size: 'small',
   bold: false,
   align: 'left',
 });

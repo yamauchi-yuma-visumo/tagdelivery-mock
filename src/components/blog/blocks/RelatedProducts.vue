@@ -30,8 +30,8 @@ const formatPrice = (price: number) => {
     <div v-for="product in products" :key="product.id" class="product-card" :class="layout">
       <img :src="product.image" :alt="product.name" class="product-image" />
       <div class="product-info">
-        <h3 class="product-name">{{ product.name }}</h3>
-        <p class="product-price">{{ formatPrice(product.price) }}</p>
+        <div class="product-name">{{ product.name }}</div>
+        <div class="product-price">{{ formatPrice(product.price) }}</div>
       </div>
     </div>
   </div>
@@ -49,11 +49,10 @@ const formatPrice = (price: number) => {
 }
 
 .product-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .product-card.horizontal {
@@ -63,6 +62,7 @@ const formatPrice = (price: number) => {
 .product-image {
   width: 100%;
   height: auto;
+  max-height: 450px;
   object-fit: cover;
 }
 
@@ -70,18 +70,21 @@ const formatPrice = (price: number) => {
   width: 40%;
 }
 
-.product-info {
-  padding: 1rem;
-}
-
 .product-name {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+  font-size: 12px;
+  margin-block: 4px;
 }
 
 .product-price {
-  font-weight: bold;
   color: #4a4a4a;
+}
+
+.horizontal .product-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {

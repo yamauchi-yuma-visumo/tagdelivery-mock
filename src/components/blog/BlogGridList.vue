@@ -8,6 +8,9 @@ import Paragraph from '@/components/blog/blocks/Paragraph.vue';
 import Image from '@/components/blog/blocks/Image.vue';
 import ImageCard from '@/components/blog/blocks/ImageCard.vue';
 import RelatedProducts from '@/components/blog/blocks/RelatedProducts.vue';
+import Spacer from '@/components/blog/blocks/Spacer.vue';
+import VerticalRelatedProducts from '@/components/blog/blocks/VerticalRelatedProducts.vue';
+import HorizontalRelatedProducts from '@/components/blog/blocks/HorizontalRelatedProducts.vue';
 
 export interface BlogPost {
   id: string;
@@ -49,32 +52,37 @@ const onSelectBlogDetail = (id: string) => {
     <BlogContents
       title="StyleNova 2023年秋冬コレクション：都会的エレガンスの進化"
       staffName="山田太郎"
-      staffIcon="/images/person.jpeg"
+      staffIcon="/images/apparel1.jpg"
       :postDate="new Date('2023-05-15')"
     >
-      <Paragraph size="medium">
+      <Paragraph>
         都市生活者のためのファッションブランド、StyleNovaが2023年秋冬コレクションを発表しました。
         今シーズンのテーマは「Urban Elegance Evolution」。洗練された都会的なスタイルに、
         クラシックなエレガンスを融合させた斬新なデザインが特徴です。
       </Paragraph>
 
-      <Heading level="2" size="medium" :bold="true">1. モダンなオフィススタイル</Heading>
+      <Spacer size="small" />
+
+      <Heading level="2">1. モダンなオフィススタイル</Heading>
+
+      <Spacer size="small" />
 
       <Paragraph>
         今シーズンのハイライトは、ビジネスシーンに適した洗練されたデザインです。
         クラシックなテーラリングに現代的なツイストを加え、快適さとスタイルを両立しています。
       </Paragraph>
 
+      <Spacer size="medium" />
+
       <Image
         :images="[
           { src: '/images/apparel1.jpg', alt: 'スタイリッシュなスーツ' },
-          {
-            src: '/images/apparel3.jpg',
-            alt: 'モダンなブラウスとスカート',
-          },
+          { src: '/images/apparel3.jpg', alt: 'モダンなブラウスとスカート' },
           { src: '/images/apparel5.jpg', alt: '洗練されたブレザー' },
         ]"
       />
+
+      <Spacer size="medium" />
 
       <RelatedProducts
         :products="[
@@ -91,35 +99,40 @@ const onSelectBlogDetail = (id: string) => {
             image: '/images/apparel4.jpg',
           },
         ]"
-        layout="horizontal"
       />
 
-      <Heading level="2" size="medium" :bold="true">2. カジュアルシックの新定義</Heading>
+      <Spacer size="large" />
+
+      <Heading level="2">2. カジュアルシックの新定義</Heading>
+
+      <Spacer size="small" />
 
       <Paragraph>
         週末やカジュアルな場面でも、StyleNovaのエレガンスは健在です。
         快適さを損なうことなく、洗練された雰囲気を醸し出すデザインが揃いました。
       </Paragraph>
 
+      <Spacer size="medium" />
+
       <Image
         :images="[
-          {
-            src: '/images/apparel3.jpg',
-            alt: 'スタイリッシュなニットウェア',
-          },
-          {
-            src: '/images/apparel4.jpg',
-            alt: 'エレガントなデニムスタイル',
-          },
+          { src: '/images/apparel3.jpg', alt: 'スタイリッシュなニットウェア' },
+          { src: '/images/apparel4.jpg', alt: 'エレガントなデニムスタイル' },
         ]"
       />
 
-      <Heading level="2" size="medium" :bold="true">3. エコフレンドリーな素材にフォーカス</Heading>
+      <Spacer size="large" />
+
+      <Heading level="2">3. エコフレンドリーな素材にフォーカス</Heading>
+
+      <Spacer size="small" />
 
       <Paragraph>
         今シーズン、StyleNovaは環境に配慮した素材の使用を大幅に増やしました。
         リサイクルポリエステルやオーガニックコットンを使用し、ファッションと環境保護の両立を目指しています。
       </Paragraph>
+
+      <Spacer size="medium" />
 
       <Image
         :images="[
@@ -131,11 +144,17 @@ const onSelectBlogDetail = (id: string) => {
         ]"
       />
 
+      <Spacer size="small" />
+
       <Paragraph size="small" align="center">
         詳細は当社のエコフレンドリーページをご覧ください。
       </Paragraph>
 
-      <Heading level="2" size="medium" :bold="true">注目のアイテム</Heading>
+      <Spacer size="large" />
+
+      <Heading level="2">注目のアイテム</Heading>
+
+      <Spacer size="medium" />
 
       <RelatedProducts
         :products="[
@@ -153,14 +172,23 @@ const onSelectBlogDetail = (id: string) => {
           },
           {
             id: 5,
-            name: 'オーガニックコットンニット',
-            price: 15800,
+            name: 'エコフレンドリーウールコート',
+            price: 49800,
+            image: '/images/apparel2.jpg',
+          },
+          {
+            id: 6,
+            name: 'リサイクルデニムジーンズ',
+            price: 18800,
             image: '/images/apparel2.jpg',
           },
         ]"
+        layout="horizontal"
       />
 
-      <Paragraph size="medium" :bold="true">
+      <Spacer size="large" />
+
+      <Paragraph :bold="true">
         StyleNova 2023年秋冬コレクションは、都会的なエレガンスと環境への配慮を見事に融合させました。
         新しい季節に向けて、自分らしさを表現しつつ、地球にも優しいファッションを楽しんでみてはいかがでしょうか。
       </Paragraph>
